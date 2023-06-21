@@ -1,0 +1,288 @@
+<html>
+<head>
+	<title>Heart Disease Prediction</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+.bg-image{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("https://media.nature.com/lw800/magazine-assets/d42473-020-00278-7/d42473-020-00278-7_18889308.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("https://images.unsplash.com/photo-1628348070889-cb656235b4eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  min-height: 200px;
+}
+
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+  *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+          height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+        }
+        .boxb{
+            border: 1px solid red;
+        }
+        .boxr{
+            border: 1px solid green;
+        }
+        .fa{
+            color: goldenrod;
+        }
+        .fa-heart{
+            color:red;
+        }
+        .btn-success{
+            border-radius: 10px;
+        }
+
+
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 400px;
+  border-radius: 5%;
+}
+.card{
+  border-radius: 10px;
+}
+.card-text{
+  color: #000;
+  font: 20px "Lato", sans-serif;
+
+}
+.card-title{
+  color: #000;
+  font: 15px "Lato", sans-serif;
+}
+
+.card-img-top{
+  height: 400px;
+  margin-top: 10px;
+  border-radius: 10px;
+
+}
+#entry{
+	font-size: 20px;
+	height: 40px;
+	width: 360px;
+	border-radius: 5px;
+	background-color: #f7f7f7;	
+}
+#entry:hover{
+	background-color: #fcfcfc;
+}
+	#submit{
+	border-radius: 8px;
+	background-color: #94d6e3;
+	width:230px;
+}
+#submit{
+	font-size: 25px;
+	border-radius: 8px;
+	background-color: #94d6e3;
+	width:230px;
+}
+#submit:hover{
+	background-color: #2d8ea1;
+}
+#submitl{
+	border-radius: 5px;
+	background-color: #f8dbff;
+	font-size: 20px;
+}
+.nav{
+	width:100%;
+	height: 30px;
+	color: #f8dbff;
+}
+#jumb{
+	height: 350px;
+}
+#num{
+	font-size: 20px;
+}
+.card{
+	margin-left: 20px;
+}
+.img{
+	width: 380px;
+	height:380px;
+}
+.body{
+	background-color: #fff5f6;
+}
+
+.head{
+	margin-left: 25px;
+}
+.dev{
+	width: 80%;
+}
+
+footer{
+        margin-top: 20px;
+    	padding-top: 60px;
+    	padding-bottom: 20px;
+    	background-color: #ffffff;
+	font_size: 20px;		
+}
+.float-right{
+	font-size:20px;
+	height: 30px;
+	text-decoration: underline;
+	
+}
+.float-left{
+	font-size:20px;
+	height: 30px;
+
+}
+.logout {
+  position: absolute;
+  right:10px ;
+  top: 10px;
+  width: auto;
+  text-align: center;
+  color: #000;
+  background-color: transparent;
+  padding: 2px;
+  font-size: 10px;
+}
+	</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+
+<form class="form-inline " action = "/logout" method = "POST">
+	<input type = "submit" value = "Logout" id = "submitl" class = "logout">
+</form>
+  <div class="caption">
+  <span class="border">Welcome {{ name }} </span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Cardiovascular diseases</h3>
+<p>Cardiovascular diseases (CVDs) are the leading cause of death globally, taking an estimated 17.9 million lives each year. CVDs are a group of disorders of the heart and blood vessels and include coronary heart disease, cerebrovascular disease, rheumatic heart disease and other conditions. More than four out of five CVD deaths are due to heart attacks and strokes, and one third of these deaths occur prematurely in people under 70 years of age.
+The most important behavioural risk factors of heart disease and stroke are unhealthy diet, physical inactivity, tobacco use and harmful use of alcohol. The effects of behavioural risk factors may show up in individuals as raised blood pressure, raised blood glucose, raised blood lipids, and overweight and obesity. These “intermediate risks factors” can be measured in primary care facilities and indicate an increased risk of heart attack, stroke, heart failure and other complications. </p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #000000;">Skip the snack,Hit the track.</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  
+    <div class="container">
+      <div class = "row">
+        <div class="card mt-4 mr-3" style="width: 35rem;">
+            <img class="card-img-top" src="https://i.pinimg.com/564x/52/72/74/5272749836d772a96f7460e98c05efcc.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Know more about Heart Diseases</h5>
+              <p class="card-text">Studies have proven that there's a higher risk of death in elderly people caused by heart diseases..</p>
+              <a href="https://www.who.int/health-topics/cardiovascular-diseases#tab=tab_1" class="btn btn-success" >Continue Reading</a>
+            </div>
+          </div>
+          <div class="card mt-4 mr-3" style="width: 35rem;">
+              <img class="card-img-top" src="https://plus.unsplash.com/premium_photo-1679502225906-85294c7ee8f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Test if you have Heart Disease or not</h5>
+                <p class="card-text">Predict whether there is a possibility of heart disease</p>
+                <p class="card-text">Accuracy upto 87%</p>
+                <a href="{{ url_for("find") }}" class="btn btn-success" >Check Now</a>
+              </div>
+            </div>
+            <div class="card mt-4 mr-3" style="width: 35rem;">
+                <img class="card-img-top" src="https://i.pinimg.com/564x/18/ce/3d/18ce3d6ef27dd4dd1f5d6b9b813802cd.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Know how to prevent these diseases</h5>
+                  <p class="card-text">Scientists discovered that this habit can help avoid heart diseases..</p>
+                  <a href="https://medlineplus.gov/howtopreventheartdisease.html" class="btn btn-success" >Continue Reading</a>
+                </div>
+            </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:15px;color: #000000;padding: 5px;letter-spacing:5px; ">
+    <a href="#" style="color: #ffffff;">Back to top</a>
+  </span>
+  </div>
+</div>
+
+</body>
+</html>
